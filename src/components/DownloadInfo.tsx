@@ -19,7 +19,7 @@ function DownloadInfo({ platform }: { platform: string }) {
             transition 
         "
             >
-              Pre-Release
+              Download Pre-Release
             </button>
           </a>
         </>
