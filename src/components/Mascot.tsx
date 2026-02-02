@@ -278,5 +278,5 @@ function Mascot(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("mascot.glb");
+useGLTF.preload("/mascot.glb");
 export default Mascot;
