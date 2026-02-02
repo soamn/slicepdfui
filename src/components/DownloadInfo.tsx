@@ -12,7 +12,7 @@ function DownloadInfo({ platform }: { platform: string }) {
             Pre Release for MacOS *can contain bugs*{" "}
           </p>
 
-          <a href="https://github.com/soamn/slicePDF/releases/download/v0.1.4/slicePDF_0.1.4_aarch64.dmg">
+          <a href="https://github.com/soamn/slicePDF/releases/latest/download/slicePDF.dmg">
             <button
               className="
           mt-6 w-full py-3 rounded-xl border-0

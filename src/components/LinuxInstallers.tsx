@@ -69,7 +69,7 @@ function InstallerContent({ type }: { type: string }) {
           </p>
 
           <a
-            href="https://github.com/soamn/slicePDF/releases/download/v0.1.4/slicePDF_0.1.4_amd64.AppImage"
+            href="https://github.com/soamn/slicePDF/releases/latest/download/slicePDF.AppImage"
             className="block mt-4"
           >
             <button className="w-full py-3 rounded-xl  border-0 cursor-pointer transition">
@@ -92,7 +92,7 @@ function InstallerContent({ type }: { type: string }) {
           </p>
 
           <a
-            href="https://github.com/soamn/slicePDF/releases/download/v0.1.4/slicePDF_0.1.4_amd64.deb"
+            href="https://github.com/soamn/slicePDF/releases/latest/download/slicePDF.deb"
             className="block mt-4"
           >
             <button className="w-full py-3 rounded-xl  border-0 cursor-pointer transition">
@@ -112,7 +112,7 @@ function InstallerContent({ type }: { type: string }) {
           <p className="text-sm text-white/70">Fedora · RHEL · openSUSE</p>
 
           <a
-            href="https://github.com/soamn/slicePDF/releases/download/v0.1.4/slicePDF-0.1.4-1.x86_64.rpm"
+            href="https://github.com/soamn/slicePDF/releases/latest/download/slicePDF.rpm"
             className="block mt-4"
           >
             <button className="w-full py-3 rounded-xl  border-0 cursor-pointer transition">
