@@ -115,7 +115,7 @@ export default function DownloadCard() {
                     border-0 z-101 bg-transparent
         relative px-4 py-2 rounded-lg text-sm font-medium
         transition-colors
-        ${isActive ? "text-white " : "text-black hover:text-white"}
+        ${isActive ? "text-white " : " hover:text-transparent hover:bg-clip-text hover:bg-linear-to-r hover:from-indigo-400 hover:via-pink-400 hover:to-red-400"}
       `}
               >
                 {platform}

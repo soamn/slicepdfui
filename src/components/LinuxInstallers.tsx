@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
 import gsap from "gsap";
 
-const installers = ["AppImage", "DEB", "RPM"] as const;
+const installers = ["Arch", "AppImage", "DEB", "RPM"] as const;
 
 type Installer = (typeof installers)[number];
 
 export default function LinuxInstallers() {
-  const [active, setActive] = useState<Installer>("AppImage");
+  const [active, setActive] = useState<Installer>("Arch");
   const contentRef = useRef<HTMLDivElement>(null);
 
   const switchInstaller = (next: Installer) => {
@@ -43,8 +43,14 @@ export default function LinuxInstallers() {
             key={name}
             onClick={() => switchInstaller(name)}
             className={`
-                rounded-lg text-xs transition bg-none cursor-pointer py-1
-                ${active === name ? " text-white" : "text-black"}
+                rounded-lg text-xs
+                transition-colors duration-300
+                text-white  cursor-pointer py-1
+                  ${
+                    active === name
+                      ? "text-transparent  bg-clip-text bg-linear-to-r from-indigo-400 via-pink-400 to-red-400 "
+                      : " hover:text-transparent hover:bg-clip-text hover:bg-linear-to-r hover:from-indigo-400 hover:via-pink-400 hover:to-red-400"
+                  }
                 `}
           >
             {name}
@@ -78,8 +84,7 @@ function InstallerContent({ type }: { type: string }) {
           </a>
 
           <pre className="mt-3 text-[12px] text-white/70 bg-white/10 rounded-md px-3 py-2 overflow-scroll">
-            chmod +x slicePDF_0.1.4_amd64.AppImage
-            ./slicePDF_0.1.4_amd64.AppImage
+            chmod +x ./slicePDF.AppImage
           </pre>
         </>
       );
@@ -101,7 +106,7 @@ function InstallerContent({ type }: { type: string }) {
           </a>
 
           <pre className="mt-3 text-xs text-white/70 bg-white/10 rounded-md px-3 py-2 overflow-scroll">
-            sudo dpkg -i slicePDF_0.1.4_amd64.deb
+            sudo dpkg -i slicePDF.deb
           </pre>
         </>
       );
@@ -121,7 +126,7 @@ function InstallerContent({ type }: { type: string }) {
           </a>
 
           <pre className="mt-3 text-xs overflow-scroll text-white/70 bg-white/10 rounded-md px-3 py-2">
-            sudo rpm -i slicePDF-0.1.4-1.x86_64.rpm
+            sudo rpm -i slicePDF.rpm
           </pre>
         </>
       );
@@ -131,12 +136,8 @@ function InstallerContent({ type }: { type: string }) {
         <>
           <p className="text-sm text-white/70">Arch Linux · Manjaro</p>
 
-          <pre className="mt-4 text-xs text-white/70 bg-white/10 rounded-md px-3 py-2 overflow-scroll">
-            sudo pacman -S slicePDF
-          </pre>
-
           <pre className="mt-2 text-xs text-white/70 bg-white/10 rounded-md px-3 py-2 overflow-scroll">
-            yay -S slicePDF
+            yay -S slicepdf
           </pre>
         </>
       );
